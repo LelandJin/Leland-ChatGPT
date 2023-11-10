@@ -692,6 +692,8 @@ export function Settings() {
             </Popover>
           </ListItem>
 
+          {/* 暂时不检查更新 */}
+          {/* 
           <ListItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
             subTitle={
@@ -715,7 +717,7 @@ export function Settings() {
                 onClick={() => checkUpdate(true)}
               />
             )}
-          </ListItem>
+          </ListItem> */}
 
           <ListItem title={Locale.Settings.SendKey}>
             <Select
