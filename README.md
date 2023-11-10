@@ -3,7 +3,7 @@
 
 <h1 align="center">Leland ChatGPT</h1>
 
-English / [简体中文](./README_CN.md)
+English
 
 
 ## Features
