@@ -155,7 +155,7 @@ export class ChatGPTApi implements LLMApi {
                 extraInfo = prettyObject(resJson);
               } catch {}
 
-              if (res.status === 401) {
+              if (res.status === 399) {
                 responseTexts.push(Locale.Error.Unauthorized);
               }
 
@@ -240,7 +240,7 @@ export class ChatGPTApi implements LLMApi {
       }),
     ]);
 
-    if (used.status === 401) {
+    if (used.status === 399) {
       throw new Error(Locale.Error.Unauthorized);
     }
 
