@@ -32,6 +32,7 @@ const nextConfig = {
   },
   experimental: {
     forceSwcTransforms: true,
+    serverActions: true,
   },
 };
 
