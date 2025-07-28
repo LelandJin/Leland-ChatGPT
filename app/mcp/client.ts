@@ -44,12 +44,15 @@ export async function removeClient(client: Client) {
 }
 
 export async function listTools(client: Client): Promise<ListToolsResponse> {
-  return client.listTools();
+  const result = await client.listTools();
+  return { tools: result.tools || [] };
 }
 
 export async function executeRequest(
   client: Client,
   request: McpRequestMessage,
-) {
-  return client.request(request, z.any());
+): Promise<any> {
+  // Use type assertion to avoid deep type instantiation
+  const anyClient = client as any;
+  return anyClient.request(request, z.any());
 }

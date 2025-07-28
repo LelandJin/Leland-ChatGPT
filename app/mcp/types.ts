@@ -17,7 +17,7 @@ export const McpRequestMessageSchema: z.ZodType<McpRequestMessage> = z.object({
   id: z.union([z.string(), z.number()]).optional(),
   method: z.string(),
   params: z.record(z.unknown()).optional(),
-});
+}) as z.ZodType<McpRequestMessage>;
 
 export interface McpResponseMessage {
   jsonrpc?: "2.0";
@@ -45,7 +45,7 @@ export const McpResponseMessageSchema: z.ZodType<McpResponseMessage> = z.object(
       })
       .optional(),
   },
-);
+) as z.ZodType<McpResponseMessage>;
 
 export interface McpNotifications {
   jsonrpc?: "2.0";
@@ -59,7 +59,7 @@ export const McpNotificationsSchema: z.ZodType<McpNotifications> = z.object({
   jsonrpc: z.literal("2.0").optional(),
   method: z.string(),
   params: z.record(z.unknown()).optional(),
-});
+}) as z.ZodType<McpNotifications>;
 
 ////////////
 // Next Chat
