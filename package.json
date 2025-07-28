@@ -18,7 +18,8 @@
     "prepare": "husky install",
     "proxy-dev": "sh ./scripts/init-proxy.sh && proxychains -f ./scripts/proxychains.conf yarn dev",
     "test": "node --no-warnings --experimental-vm-modules $(yarn bin jest) --watch",
-    "test:ci": "node --no-warnings --experimental-vm-modules $(yarn bin jest) --ci"
+    "test:ci": "node --no-warnings --experimental-vm-modules $(yarn bin jest) --ci",
+    "clean-node": "rm -rf node_modules"
   },
   "dependencies": {
     "@fortaine/fetch-event-source": "^3.0.6",
@@ -59,6 +60,7 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.4.0",
+    "@types/jest": "29.5.12",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.9.0",
